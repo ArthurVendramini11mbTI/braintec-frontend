@@ -1,0 +1,144 @@
+body {
+  font-family: 'Inria Sans', sans-serif;
+  text-align: center;
+  background: var(--hover);
+  margin: 0;
+  color: #fff;
+}
+
+:root{
+  --turquesa-escuro: #103b34;
+  --hover: #39867c;
+  --verde-claro: #C9EAC1;
+  --verde-meio-claro: #58C79D;
+  --quase-tuquesa: #1E5D56;
+  --branco-esverdeado: #F0FDF4;
+  --amarelo: #F8B52D;
+  --cinza-claro: #eaf3ef;
+  --verde-musgo: #61B33C;
+  --azul: #2CA8A2;
+  --verde-verde: #32A852;
+  --azul-claro: #E8F8F8;
+  --verde-esbranquiçado: #F1FCEF;
+}
+
+button:hover{
+  transform: scale(1.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Botões de topo */
+.top-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  position: sticky;
+  top: 0;
+}
+
+#home-btn, #restart-btn {
+  padding: 10px 20px;
+  border: none;
+  background: #c44;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+#home-btn {
+  background: #333;
+}
+
+#home-btn a{
+  text-decoration: none;
+  color: #fff;
+}
+
+#home-btn:hover { background: #555; }
+#restart-btn:hover { background: #a22; }
+
+/* Tela inicial */
+#start-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  background-color: var(--quase-tuquesa);
+  margin-inline: 25rem;
+  border-radius: 1rem;
+  
+}
+
+
+#start-btn {
+  padding: 15px 30px;
+  background: var(--azul);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+#start-btn:hover {
+   background: var(--quase-tuquesa); 
+   border: solid, .1rem, white;
+  }
+
+/* Container do quiz */
+.quiz-container {
+  background: var(--quase-tuquesa);
+  padding: 40px;
+  border-radius: 12px;
+  width: 85%;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+}
+
+/* Grid 2x2 para respostas */
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.options-grid button {
+  padding: 15px;
+  border: none;
+  background: var(--azul);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.options-grid button:hover {
+  background: var(--quase-tuquesa); 
+   border: solid, .1rem, white;
+}
+
+.correct { background: green !important; }
+.wrong { background: red !important; }
+
+#result {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#next-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  background: #ffa500;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#next-btn:hover { background: #e59400; }

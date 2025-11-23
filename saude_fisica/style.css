@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inria Sans', sans-serif;
+}
+
+html {
+    font-size: 62.5%; /* 62.5% de 16px = 10px */
+    scroll-behavior: smooth;
+  }
+
+:root{
+    --turquesa-escuro: #103b34;
+    --hover: #39867c;
+    --cinza: #EDEDED;
+}
+
+
+.sec1, .sec2, .sec4{
+  padding: 0 5rem;
+}
+
+header{
+    padding: 0 5rem;
+}
+
+header a{
+    text-decoration: none;
+    color:var(--turquesa-escuro);
+    font-size: 9rem;
+}
+
+header a:hover{
+    color: var(--hover);
+    transform: scale(1.03);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+nav a{
+    font-size: 2.5rem;
+    padding-left: 8rem;
+}
+
+nav{
+    align-items: center;
+    display: flex;
+    gap: 5rem;
+  }
+  
+header{
+    padding-top: 2rem;
+    display: flex;
+    justify-content: flex-start;
+   
+    display: flex;
+    gap: 0rem;
+    
+  }
+
+  #logo{
+    text-transform: uppercase;
+  }
+
+#linha{
+    width: 40rem;       /* largura da linha */
+    border: 0;
+    border-bottom: 0.2rem solid var(--turquesa-escuro);
+    margin: 1rem auto;  /* centraliza */
+  }
+
+#mulherdoheader{
+    padding-right: 17rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50rem;
+    height: 55rem;
+    transform: translateX(20%); /* faz a imagem ultrapassar o header */
+    top: 4rem;
+  }
+
+
+.sec1{
+    display: inline-block;
+  }
+
+.sec1 h1{
+    font-size: 7rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+
+.sec1 h2{
+    font-size: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 6rem;
+  }
+
+
+
+.sec1 a{
+  text-decoration: none;
+}
+
+.sec2{
+  padding-top: 7rem;
+  margin-bottom: 7rem;
+ }
+
+.sec2 img{
+  width: 20rem;
+  padding-bottom: 1rem
+ }
+
+
+ .item{
+  background-color: var(--cinza);
+  border-radius: 4rem;
+  box-shadow: 0.8rem 0.8rem 1.2rem rgba(0,0,0,0.3);
+  text-align: center;
+  padding-top: 2rem;
+  max-width: 30rem;
+  height: 35rem;
+  margin: 3rem;
+ }
+
+ .item:hover{
+  transform: scale(1.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+ }
+
+ .item h3{
+  font-size: 3rem;
+  color: var(--turquesa-escuro);
+  padding-bottom: 2rem;
+ }
+
+ .siema button{
+  background: none;
+  border: none;
+  cursor: pointer;
+  background-color: var(--cinza);
+ }
+
+ .item p{
+  font-size: 1.5rem;
+  padding-bottom: 2rem;
+ }
+
+ .item p, .item h3{
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+ }
+
+
+.sec3 img{
+  width: 32rem;
+  height: 42rem;
+  border-radius: 4rem;
+} 
+
+
+.container{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;    
+  padding-bottom: 5rem;
+  background-color: var(--turquesa-escuro);
+  border-left: none;
+  border-right: none; 
+}
+
+.container img, .container p, .container h2{
+  margin-inline: 4.5rem;
+  margin-top: 2rem;
+}
+
+.container p, .container h2{
+  color: white;
+}
+
+.textos2 h2{
+  font-size: 7rem;
+  padding-top: 2rem;
+}
+
+.textos2 p{
+  font-size: 2.3rem;
+  padding-top: 8rem;
+}
+
+.textos2 {
+  padding-left: 3rem;
+}
+
+.sec4{
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.sec4 h1{
+  font-size: 10rem;
+  text-transform: uppercase;
+  color: var(--turquesa-escuro);
+}
+
+.sec4 h2{
+  font-size: 4rem;
+  margin-top: -0.5rem;
+}
+
+.sec4 button{
+  text-align: center;
+  border: solid, 0.2rem, var(--turquesa-escuro);
+  background-color: white;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  padding: 1rem;
+  padding-inline: 3rem;
+  cursor: pointer;
+  color: var(--turquesa-escuro);
+}
+
+.sec4 button:hover{
+  transform: scale(1.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background-color: var(--turquesa-escuro);
+  color: white;
+
+}
+
+.sec4 a{
+  text-decoration: none;
+  text-align: center;
+  
+}
+
+
+  

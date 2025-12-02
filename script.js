@@ -63,3 +63,44 @@ function fecharSidebar() {
 
 btnMenu.addEventListener("click", abrirSidebar);
 btnFechar.addEventListener("click", fecharSidebar);
+
+function init() {
+  const sidebar = document.querySelector("#sidebar")
+  const nav = document.querySelector("#nav")
+
+  const user = JSON.parse(sessionStorage.getItem("user"))
+
+  if (user) {
+    sidebar.innerHTML += `
+
+            <h2>Usuário:  ${user.name}</h2>
+            <button id="logout">Sair</button>
+        `
+
+    nav.innerHTML += `
+
+            <a href="desafios/../desafios/desfios.html">Jogar</a>
+             <a href="./ranking/ranking.html">Ranking</a>
+        `
+
+
+
+    const logoutButton = document.querySelector("#logout")
+    logoutButton.addEventListener("click", logout)
+
+    return
+  }
+
+  sidebar.innerHTML += `
+        
+            <a href="./login/login.html">Login</a>
+  
+    `
+}
+
+function logout() {
+  sessionStorage.removeItem("user")
+  window.location.reload()
+}
+
+init()

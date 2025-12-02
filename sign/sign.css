@@ -84,7 +84,7 @@ h1 {
     color: rgb(95, 93, 93);
 }
 
-.form {
+form {
     margin-top: 3rem;
 }
 
@@ -93,7 +93,7 @@ label {
     font-size: 4rem;
 }
 
-.form button {
+form button {
     margin-top: 2rem;
     background-color: var(--turquesa-escuro);
     color: white;
@@ -105,7 +105,7 @@ label {
     cursor: pointer;
 }
 
-.form div {
+form div {
     display: flex;
     justify-content: center;
 }

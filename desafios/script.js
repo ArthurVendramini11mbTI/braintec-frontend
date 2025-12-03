@@ -137,4 +137,37 @@ function showResult() {
   nextBtn.style.display = "none";
   resultEl.textContent = `🎉 Você acertou ${score} de ${quizData.length} perguntas!`;
   restartBtn.style.display = "block";
+  enviarPontuacao()
+}
+
+
+
+//ENVIAR PRO BACKEND
+
+const user = JSON.parse(sessionStorage.getItem("user"));
+
+async function enviarPontuacao() {
+  if (!user || !user.id) {
+    return alert("Usuário não encontrado. Faça login novamente.");
+  }
+
+  try {
+    const response = await fetch("http://localhost:3333/pontuar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        usuario: user.id,
+        pontuacao: score
+      })
+    });
+
+    const data = await response.json();
+    alert(data.message);
+
+  } catch (error) {
+    console.log("Erro ao enviar pontuação:", error);
+    alert("Não foi possível enviar sua pontuação.");
+  }
 }

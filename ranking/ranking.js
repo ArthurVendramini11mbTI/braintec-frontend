@@ -1,6 +1,6 @@
 async function carregarRanking() {
     try {
-        const response = await fetch("http://localhost:3333/ranking");
+        const response = await fetch("https://braintec-backend.vercel.app/ranking");
         const ranking = await response.json();
 
         const primeiro = document.getElementById("primeiro");

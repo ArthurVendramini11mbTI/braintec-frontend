@@ -152,7 +152,7 @@ async function enviarPontuacao() {
   }
 
   try {
-    const response = await fetch("http://localhost:3333/pontuar", {
+    const response = await fetch("https://braintec-backend.vercel.app/pontuar", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"

@@ -1,15 +1,17 @@
 body {
   font-family: 'Inria Sans', sans-serif;
   text-align: center;
-  background: var(--hover);
+  background: linear-gradient(to top, var(--verde-claro), var(--verde-escuro));
   margin: 0;
   color: #fff;
+  height: 100vh;
 }
 
-:root{
+:root {
   --turquesa-escuro: #103b34;
   --hover: #39867c;
-  --verde-claro: #C9EAC1;
+  --verde-escuro: #1E5D56;
+  --verde-claro: #32A852;
   --verde-meio-claro: #58C79D;
   --quase-tuquesa: #1E5D56;
   --branco-esverdeado: #F0FDF4;
@@ -22,7 +24,7 @@ body {
   --verde-esbranquiçado: #F1FCEF;
 }
 
-button:hover{
+button:hover {
   transform: scale(1.03);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -36,7 +38,8 @@ button:hover{
   top: 0;
 }
 
-#home-btn, #restart-btn {
+#home-btn,
+#restart-btn {
   padding: 10px 20px;
   border: none;
   background: #c44;
@@ -50,13 +53,19 @@ button:hover{
   background: #333;
 }
 
-#home-btn a{
+#home-btn a {
   text-decoration: none;
   color: #fff;
 }
 
-#home-btn:hover { background: #555; }
-#restart-btn:hover { background: #a22; }
+#home-btn:hover {
+  background: #555;
+}
+
+#restart-btn:hover {
+  background: #a22;
+  display: none;
+}
 
 /* Tela inicial */
 #start-screen {
@@ -68,7 +77,7 @@ button:hover{
   background-color: var(--quase-tuquesa);
   margin-inline: 25rem;
   border-radius: 1rem;
-  
+
 }
 
 
@@ -83,9 +92,9 @@ button:hover{
 }
 
 #start-btn:hover {
-   background: var(--quase-tuquesa); 
-   border: solid, .1rem, white;
-  }
+  background: var(--quase-tuquesa);
+  border: solid, .1rem, white;
+}
 
 /* Container do quiz */
 .quiz-container {
@@ -95,7 +104,7 @@ button:hover{
   width: 85%;
   max-width: 1000px;
   margin: 40px auto;
-  box-shadow: 0px 6px 15px rgba(0,0,0,0.3);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
 }
 
 /* Grid 2x2 para respostas */
@@ -118,12 +127,17 @@ button:hover{
 }
 
 .options-grid button:hover {
-  background: var(--quase-tuquesa); 
-   border: solid, .1rem, white;
+  background: var(--quase-tuquesa);
+  border: solid, .1rem, white;
 }
 
-.correct { background: green !important; }
-.wrong { background: red !important; }
+.correct {
+  background: green !important;
+}
+
+.wrong {
+  background: red !important;
+}
 
 #result {
   margin-top: 20px;
@@ -141,4 +155,6 @@ button:hover{
   cursor: pointer;
 }
 
-#next-btn:hover { background: #e59400; }
+#next-btn:hover {
+  background: #e59400;
+}

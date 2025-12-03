@@ -1,35 +1,55 @@
 // Perguntas
 const quizData = [
-  { question: "Qual prática ajuda a reduzir o estresse e melhora a saúde mental?",
-    options: ["Meditação","Dormir pouco","Beber refrigerante","Ficar sem pausas"],
-    answer: "Meditação" },
-  { question: "Quantos minutos de atividade física moderada são recomendados por semana?",
-    options: ["30 minutos","150 minutos","5 horas","Nenhum"],
-    answer: "150 minutos" },
-  { question: "Qual é um sinal comum de ansiedade?",
-    options: ["Respiração acelerada","Relaxamento","Satisfação constante","Calma"],
-    answer: "Respiração acelerada" },
-  { question: "Beber água regularmente traz qual benefício?",
-    options: ["Melhora concentração","Aumenta o estresse","Causa insônia","Piora a digestão"],
-    answer: "Melhora concentração" },
-  { question: "Qual hábito favorece um sono de qualidade?",
-    options: ["Evitar telas antes de dormir","Tomar café à noite","Dormir a qualquer hora","Ficar no celular na cama"],
-    answer: "Evitar telas antes de dormir" },
-  { question: "Qual hormônio é conhecido como 'hormônio da felicidade'?",
-    options: ["Cortisol","Serotonina","Adrenalina","Insulina"],
-    answer: "Serotonina" },
-  { question: "Caminhar 30 minutos por dia ajuda a:",
-    options: ["Melhorar o humor","Aumentar ansiedade","Piorar sono","Reduzir memória"],
-    answer: "Melhorar o humor" },
-  { question: "Uma técnica eficaz para acalmar a mente é:",
-    options: ["Respiração profunda","Dormir tarde","Cafeína em excesso","Isolamento"],
-    answer: "Respiração profunda" },
-  { question: "A falta de atividade física pode levar a:",
-    options: ["Doenças cardíacas","Mais energia","Boa imunidade","Sono melhor"],
-    answer: "Doenças cardíacas" },
-  { question: "Qual alimento contribui para boa saúde cerebral?",
-    options: ["Peixes ricos em ômega-3","Frituras","Refrigerantes","Doces em excesso"],
-    answer: "Peixes ricos em ômega-3" }
+  {
+    question: "Qual prática ajuda a reduzir o estresse e melhora a saúde mental?",
+    options: ["Meditação", "Dormir pouco", "Beber refrigerante", "Ficar sem pausas"],
+    answer: "Meditação"
+  },
+  {
+    question: "Quantos minutos de atividade física moderada são recomendados por semana?",
+    options: ["30 minutos", "150 minutos", "5 horas", "Nenhum"],
+    answer: "150 minutos"
+  },
+  {
+    question: "Qual é um sinal comum de ansiedade?",
+    options: ["Respiração acelerada", "Relaxamento", "Satisfação constante", "Calma"],
+    answer: "Respiração acelerada"
+  },
+  {
+    question: "Beber água regularmente traz qual benefício?",
+    options: ["Melhora concentração", "Aumenta o estresse", "Causa insônia", "Piora a digestão"],
+    answer: "Melhora concentração"
+  },
+  {
+    question: "Qual hábito favorece um sono de qualidade?",
+    options: ["Evitar telas antes de dormir", "Tomar café à noite", "Dormir a qualquer hora", "Ficar no celular na cama"],
+    answer: "Evitar telas antes de dormir"
+  },
+  {
+    question: "Qual hormônio é conhecido como 'hormônio da felicidade'?",
+    options: ["Cortisol", "Serotonina", "Adrenalina", "Insulina"],
+    answer: "Serotonina"
+  },
+  {
+    question: "Caminhar 30 minutos por dia ajuda a:",
+    options: ["Melhorar o humor", "Aumentar ansiedade", "Piorar sono", "Reduzir memória"],
+    answer: "Melhorar o humor"
+  },
+  {
+    question: "Uma técnica eficaz para acalmar a mente é:",
+    options: ["Respiração profunda", "Dormir tarde", "Cafeína em excesso", "Isolamento"],
+    answer: "Respiração profunda"
+  },
+  {
+    question: "A falta de atividade física pode levar a:",
+    options: ["Doenças cardíacas", "Mais energia", "Boa imunidade", "Sono melhor"],
+    answer: "Doenças cardíacas"
+  },
+  {
+    question: "Qual alimento contribui para boa saúde cerebral?",
+    options: ["Peixes ricos em ômega-3", "Frituras", "Refrigerantes", "Doces em excesso"],
+    answer: "Peixes ricos em ômega-3"
+  }
 ];
 
 // Seletores
@@ -49,7 +69,6 @@ let score = 0;
 startBtn.addEventListener("click", () => {
   startScreen.style.display = "none";
   quiz.style.display = "block";
-  restartBtn.style.display = "block";
   currentQuestion = 0;
   score = 0;
   loadQuestion();
@@ -117,4 +136,5 @@ function showResult() {
   optionsEl.style.display = "none";
   nextBtn.style.display = "none";
   resultEl.textContent = `🎉 Você acertou ${score} de ${quizData.length} perguntas!`;
+  restartBtn.style.display = "block";
 }

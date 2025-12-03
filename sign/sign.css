@@ -48,7 +48,7 @@ section {
     background-color: white;
     border: solid, 0.1rem, black;
     border-radius: 0.6rem;
-    padding: .5rem;
+    padding: .2rem;
 }
 
 .header a {
@@ -66,7 +66,7 @@ section {
 }
 
 .seta {
-    margin-right: 46rem;
+    margin-right: 60%;
     cursor: pointer;
 }
 
@@ -80,12 +80,16 @@ p {
 
 h1 {
     font-size: 7rem;
-    margin-top: 1rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     color: rgb(95, 93, 93);
+    text-align: center;
 }
 
 form {
     margin-top: 3rem;
+    align-items: center;
+    text-align: center;
 }
 
 label {
@@ -100,7 +104,7 @@ form button {
     border: none;
     border-radius: 1.2rem;
     padding: 1.5rem;
-    padding-inline: 4rem;
+    padding-inline: 6rem;
     font-size: 1.8rem;
     cursor: pointer;
 }
@@ -116,8 +120,12 @@ input {
     background-color: var(--verde-claro);
     border: none;
     padding: 1.5rem;
-    padding-right: 25%;
+    padding-right: 40%;
     border-radius: 1rem;
+}
+
+input:focus {
+    outline: .2rem solid var(--hover);
 }
 
 button:hover {

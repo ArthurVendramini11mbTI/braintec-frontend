@@ -65,7 +65,6 @@ btnMenu.addEventListener("click", abrirSidebar);
 btnFechar.addEventListener("click", fecharSidebar);
 
 function init() {
-  const sidebar = document.querySelector("#sidebar")
   const nav = document.querySelector("#nav")
 
   const user = JSON.parse(sessionStorage.getItem("user"))
@@ -73,7 +72,7 @@ function init() {
   if (user) {
     sidebar.innerHTML += `
 
-            <h2>Usuário:  ${user.name}</h2>
+            <h2 id="username">Usuário:  ${user.name}</h2>
             <button id="logout">Sair</button>
         `
 
